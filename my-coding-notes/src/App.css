@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+.vhs {
+    clip-path: path("M 10, 50 L 90,50 A 10,10,0,0,0 100,40 L 100,10 A 10,10,0,0,1 110,0 L 190,0 A 10,10,0,0,1 200,10 L 200,190 A 10,10,0,0,1 190,200 L 10,200 A 10,10,0,0,1 0,190 L 0,60 A 10,10,0,0,1 10,50 Z");
+}
+
+li {
+    backdrop-filter: blur(8px) saturate(100%);
+    -webkit-backdrop-filter: blur(8px) saturate(100%);
+    background-color: rgba(42, 53, 73, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+li:nth-child(1) {
+    z-index: 3;
+}
+
+li:nth-child(2) {
+    z-index: 2;
+}
+
+li:nth-child(3) {
+    z-index: 1;
+}
+
+li:hover {
+    @apply bg-violet-300;
+    transform: rotate(-5deg);
+    transition: all 0.3s;
+}
